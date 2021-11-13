@@ -10,4 +10,4 @@ See the live view here [password-generator](https://kamil-siwiec.github.io/passw
 - JavaScript, ES6
 
 ## Screenshots:
-![password-generator]()
+![password-generator](gh/generator.png)
