@@ -85,3 +85,21 @@ function generateX() {
 }
 
 generateEl.addEventListener("click", generatePassword);
+
+// Obsługa Kopiowania
+
+copyEl.addEventListener("click", () => {
+  const textarea = document.createElement("textarea");
+  const password = pwEl.innerText;
+
+  if (!password) {
+    return;
+  }
+
+  textarea.value = password;
+  document.body.appendChild(textarea);
+  textarea.select();
+  document.execCommand("copy");
+  textarea.remove();
+  alert("Password coppied to clipboard");
+});
