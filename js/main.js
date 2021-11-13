@@ -60,3 +60,28 @@ function generatePassword() {
 
   pwEl.innerText = password;
 }
+
+function generateX() {
+  const xs = [];
+  if (upperEl.checked) {
+    xs.push(getUppercase());
+  }
+
+  if (lowerEl.checked) {
+    xs.push(getLowercase());
+  }
+
+  if (numberEl.checked) {
+    xs.push(getNumber());
+  }
+
+  if (symbolEl.checked) {
+    xs.push(getSymbol());
+  }
+
+  if (xs.length === 0) return "";
+
+  return xs[Math.floor(Math.random() * xs.length)];
+}
+
+generateEl.addEventListener("click", generatePassword);
