@@ -33,7 +33,7 @@ h2 {
   width: 100%;
   position: relative;
   background-color: rgb(2, 16, 63);
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   padding: 1rem;
   overflow: auto;
 }
@@ -48,6 +48,7 @@ h2 {
   color: #000;
   font-family: inherit;
   font-weight: bold;
+  font-size: 0.75rem;
   transform: translate(0, 20%);
   transition: opacity 0.3s linear, transform 0.3s linear;
   opacity: 0;
@@ -73,4 +74,17 @@ h2 {
   justify-content: space-between;
   margin: 1rem 0;
   color: #eee;
+}
+
+.btn-bottom {
+  display: block;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  width: 100%;
+  border: none;
+  background-color: rgb(66, 71, 237);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
 }
