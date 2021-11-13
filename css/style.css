@@ -26,6 +26,44 @@ h2 {
   box-shadow: 0px 4px 10px rgb(0, 0, 0, 0.5);
 }
 
+.pw {
+  display: flex;
+  align-items: center;
+  height: 70px;
+  width: 100%;
+  position: relative;
+  background-color: rgb(2, 16, 63);
+  font-size: 1.5rem;
+  padding: 1rem;
+  overflow: auto;
+}
+
+.pw button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: white;
+  color: #000;
+  font-family: inherit;
+  font-weight: bold;
+  transform: translate(0, 20%);
+  transition: opacity 0.3s linear, transform 0.3s linear;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.pw:hover button {
+  opacity: 1;
+  transform: translate(0, 0%);
+}
+
+.pw-header {
+  padding: 1rem;
+}
+
 .form {
   padding: 1rem 0;
 }
