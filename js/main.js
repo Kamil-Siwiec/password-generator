@@ -1,3 +1,5 @@
+// Elements
+
 const pwEl = document.getElementById("pw");
 const copyEl = document.getElementById("copy");
 const lengthEl = document.getElementById("length");
@@ -11,3 +13,50 @@ const upperLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const lowerLetters = "abcdefghijklmnopqrstuvwxyz";
 const numbers = "0123456789";
 const symbols = "!@#$%^&*()_+=";
+
+// Functions
+
+function getLowercase() {
+  return lowerLetters[Math.floor(Math.random() * lowerLetters.length)];
+}
+
+function getUppercase() {
+  return upperLetters[Math.floor(Math.random() * upperLetters.length)];
+}
+
+function getNumber() {
+  return numbers[Math.floor(Math.random() * numbers.length)];
+}
+
+function getSymbol() {
+  return symbols[Math.floor(Math.random() * symbols.length)];
+}
+
+function generatePassword() {
+  const length = lengthEl.value;
+
+  let password = "";
+
+  if (upperEl.checked) {
+    password += getUppercase();
+  }
+
+  if (lowerEl.checked) {
+    password += getLowercase();
+  }
+
+  if (numberEl.checked) {
+    password += getNumber();
+  }
+
+  if (symbolEl.checked) {
+    password += getSymbol();
+  }
+
+  for (let i = 0; i < length; i++) {
+    const x = generateX();
+    password += x;
+  }
+
+  pwEl.innerText = password;
+}
