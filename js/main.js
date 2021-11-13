@@ -37,22 +37,6 @@ function generatePassword() {
 
   let password = "";
 
-  if (upperEl.checked) {
-    password += getUppercase();
-  }
-
-  if (lowerEl.checked) {
-    password += getLowercase();
-  }
-
-  if (numberEl.checked) {
-    password += getNumber();
-  }
-
-  if (symbolEl.checked) {
-    password += getSymbol();
-  }
-
   for (let i = 0; i < length; i++) {
     const x = generateX();
     password += x;
